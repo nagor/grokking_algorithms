@@ -1,29 +1,30 @@
 (function (exports) {
-'use strict';
+    'use strict';
 
-function binary_search(list, item) {
-  let low = 0;
-  let high = list.length - 1;
+    function binarySearch(list, item) {
+        let low = 0;
+        let high = list.length - 1;
 
-  while (low <= high) {
-    let mid = Math.floor((low + high) / 2);
-    let guess = list[mid];
-    if (guess === item) {
-      return mid;
+        while (low <= high) {
+            let mid = Math.floor((low + high) / 2);
+            let guess = list[mid];
+            if (guess === item) {
+                return mid;
+            }
+            if (guess > item) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+
+        return null;
     }
-    if (guess > item) {
-      high = mid - 1;
-    } else {
-      low = mid + 1;
-    }
-  }
 
-  return null;
-}
-
-exports.search = binary_search;
+    exports.search = binarySearch;
 }(
-  (typeof exports === 'undefined')
-      ? window
-      : exports
-));
+    (typeof exports === 'undefined')
+        ? window
+        : exports
+    )
+);

@@ -16,7 +16,7 @@
                     : searchInList(mid + 1, high);
         };
         return search(list, item)(0, list.length - 1);
-    }
+    };
 
     exports.search = binarySearch;
 }(
