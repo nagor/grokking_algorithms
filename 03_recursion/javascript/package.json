@@ -1,0 +1,19 @@
+{
+  "name": "examples-03-js",
+  "version": "0.0.1",
+  "description": "Examples for chapter 03 in JS",
+  "main": "test.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-standard": "^7.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "mocha": "^3.2.0",
+    "should": "^11.2.0"
+  }
+}

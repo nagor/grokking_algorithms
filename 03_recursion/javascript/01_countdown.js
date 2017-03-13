@@ -1,11 +1,12 @@
-function countdown(i) {
-  console.log(i);
-  // base case
-  if (i <= 0) {
-    return;
-  } else {
-    countdown(i-1);
-  }
-}
-
-countdown(5);
+(function (exports) {
+    function countdown(i, accumulator = 0) {
+        return i > 0
+            ? countdown(i - 1, accumulator + 1) // recursive case
+            : accumulator;  // base case
+    }
+    exports.countdown = countdown;
+}(
+    exports === undefined
+        ? window
+        : exports
+));
