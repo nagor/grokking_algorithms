@@ -7,3 +7,13 @@ describe('Countdown recursion test', () => {
             .exactly(5);
     });
 });
+
+describe('Factorial test', () => {
+    const { factorial } = require('./03_factorial');
+    require('should');
+    it('Factorial', () => {
+        factorial(5)
+            .should.be.an.Number()
+            .exactly(120);
+    });
+});

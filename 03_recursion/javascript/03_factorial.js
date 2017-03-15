@@ -1,9 +1,15 @@
-function fact(x) {
-    if (x === 1) {
-        return 1;
-    } else {
-        return x * fact(x - 1);
+(function (exports) {
+    function fact(x) {
+        if (x === 1) {
+            return 1;
+        } else {
+            return x * fact(x - 1);
+        }
     }
-}
 
-console.log(fact(5));
+    exports.factorial = fact;
+}(
+    exports === undefined
+        ? window
+        : exports
+));
