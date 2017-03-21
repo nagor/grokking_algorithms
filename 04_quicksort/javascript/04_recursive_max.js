@@ -1,11 +1,22 @@
-'use strict';
+(function (exports) {
+    'use strict';
 
-function max(list) {
-  if (list.length === 2) {
-    return list[0] > list[1] ? list[0] : list[1];
-  }
-  let sub_max = max(list.slice(1));
-  return list[0] > sub_max ? list[0] : sub_max;
-}
+    function max(list) {
+        // Fixed case if array.length < 2
+        if (list.length < 2) {
+            return list[0]; // =>: single item or undefined
+        }
 
-console.log(max([1, 5, 10, 25, 16, 1])); // 25
+        if (list.length === 2) {
+            return list[0] > list[1] ? list[0] : list[1];
+        }
+        let subMax = max(list.slice(1));
+        return list[0] > subMax ? list[0] : subMax;
+    }
+
+    exports.max = max;
+}(
+    exports === undefined
+        ? window
+        : exports
+));
