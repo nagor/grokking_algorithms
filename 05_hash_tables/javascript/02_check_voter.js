@@ -1,16 +1,19 @@
-'use strict';
+(function (exports) {
+    'use strict';
 
-const voted = {};
-function check_voter(name) {
-  if (voted[name]) {
-    console.log('kick them out!');
-  } else {
-    voted[name] = true;
-    console.log('let them vote!');
-  }
-}
+    const voted = {};
+    function checkVoter(name) {
+        if (voted[name]) {
+            return true;
+        } else {
+            voted[name] = true;
+            return false;
+        }
+    }
 
-
-check_voter("tom"); // let them vote!
-check_voter("mike"); // let them vote!
-check_voter("mike"); // kick them out!
+    exports.checkVoter = checkVoter;
+}(
+    exports === undefined
+        ? window
+        : exports
+));
