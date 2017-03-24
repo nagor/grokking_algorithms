@@ -10,7 +10,7 @@
 
     exports.count = count;
 }(
-    exports === undefined
+    typeof exports === 'undefined'
         ? window
         : exports
 ));

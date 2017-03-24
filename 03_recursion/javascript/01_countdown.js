@@ -6,7 +6,7 @@
     }
     exports.countdown = countdown;
 }(
-    exports === undefined
+    typeof exports === 'undefined'
         ? window
         : exports
 ));

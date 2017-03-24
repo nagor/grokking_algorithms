@@ -23,8 +23,7 @@
 
     exports.search = binarySearch;
 }(
-    (typeof exports === 'undefined')
+    typeof exports === 'undefined'
         ? window
         : exports
-    )
-);
+));

@@ -27,8 +27,7 @@
 
     exports.sort = selectionSort;
 }(
-    (exports === undefined)
+    typeof exports === 'undefined'
         ? window
         : exports
-    )
-);
+));

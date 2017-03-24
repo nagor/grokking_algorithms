@@ -16,7 +16,7 @@
 
     exports.max = max;
 }(
-    exports === undefined
+    typeof exports === 'undefined'
         ? window
         : exports
 ));

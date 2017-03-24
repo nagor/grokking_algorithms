@@ -13,7 +13,7 @@
 
     exports.checkVoter = checkVoter;
 }(
-    exports === undefined
+    typeof exports === 'undefined'
         ? window
         : exports
 ));

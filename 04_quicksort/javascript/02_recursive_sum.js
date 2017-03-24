@@ -10,7 +10,7 @@
 
     exports.sum = sum;
 }(
-    exports === undefined
+    typeof exports === 'undefined'
         ? window
         : exports
 ));

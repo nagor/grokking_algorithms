@@ -18,7 +18,7 @@
 
     exports.quickSort = quickSort;
 }(
-    exports === undefined
+    typeof exports === 'undefined'
         ? window
         : exports
 ));
