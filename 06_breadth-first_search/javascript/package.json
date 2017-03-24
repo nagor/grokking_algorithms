@@ -1,7 +1,7 @@
 {
-  "name": "examples-04-js",
+  "name": "examples-06-js",
   "version": "0.0.1",
-  "description": "Examples for chapter 04 in JS",
+  "description": "Examples for chapter 06 in JS",
   "main": "test.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha test.js"
