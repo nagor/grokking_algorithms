@@ -4,7 +4,7 @@
   "description": "Examples for chapter 07 in JS",
   "main": "test.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha test.js"
+    "test": "node ./node_modules/eslint/bin/eslint.js *.js && node ./node_modules/mocha/bin/mocha test.js"
   },
   "author": "",
   "license": "ISC",
